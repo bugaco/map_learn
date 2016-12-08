@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import <MAMapKit/MAMapKit.h>
 
 @interface ViewController ()
+
+@property (nonatomic, strong) MAMapView *mapView;
+@property (nonatomic, strong) NSArray *sectionTitles;
+@property (nonatomic, strong) NSArray *cities;
+@property (nonatomic, strong) NSArray *provinces;
+@property (nonatomic, strong) NSArray *municipalities;
 
 @end
 
@@ -16,14 +23,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    _mapView.mapType = MAMapTypeStandardNight;
+    [self.view addSubview:_mapView];
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    _mapView.showTraffic = YES;
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    _mapView.showTraffic = NO;
+}
+
+- (void)setupCities{
+    _sectionTitles = @[@"全国", @"直辖市", @"省份"];
+    _cities = [MAOfflineMap sharedOfflineMap].cities;
+    _provinces = [MAOfflineMap sharedOfflineMap].provinces;
+    _municipalities = [MAOfflineMap sharedOfflineMap].municipalities;
+}
 
 @end

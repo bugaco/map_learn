@@ -1,12 +1,17 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## AMapFoundation-NO-IDFA
+## AMap3DMap
 
 Copyright © 2014 AutoNavi. All Rights Reserved.
 
 
-## AMapLocation-NO-IDFA
+## AMapFoundation
+
+Copyright © 2014 AutoNavi. All Rights Reserved.
+
+
+## AMapSearch
 
 Copyright © 2014 AutoNavi. All Rights Reserved.
 
