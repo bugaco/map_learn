@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC4ECA2870833371E33FDBAC /* libPods-高德地图demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EED3D84AA2D008FF34BA66 /* libPods-高德地图demo.a */; };
 		E6EEF7D61DF94E1D0036A673 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEF7D51DF94E1D0036A673 /* main.m */; };
 		E6EEF7D91DF94E1D0036A673 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEF7D81DF94E1D0036A673 /* AppDelegate.m */; };
 		E6EEF7DC1DF94E1D0036A673 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EEF7DB1DF94E1D0036A673 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		212F795C1A2956752443FAB8 /* Pods-高德地图demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高德地图demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-高德地图demo/Pods-高德地图demo.release.xcconfig"; sourceTree = "<group>"; };
+		47EED3D84AA2D008FF34BA66 /* libPods-高德地图demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高德地图demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2F735CEE6FF143B8DC8422 /* Pods-高德地图demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高德地图demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高德地图demo/Pods-高德地图demo.debug.xcconfig"; sourceTree = "<group>"; };
 		E6EEF7D11DF94E1D0036A673 /* 高德地图demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高德地图demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EEF7D51DF94E1D0036A673 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6EEF7D71DF94E1D0036A673 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4ECA2870833371E33FDBAC /* libPods-高德地图demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		195526913462E39F094AB914 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47EED3D84AA2D008FF34BA66 /* libPods-高德地图demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C10A1911A2ACB74FBD169AD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D2F735CEE6FF143B8DC8422 /* Pods-高德地图demo.debug.xcconfig */,
+				212F795C1A2956752443FAB8 /* Pods-高德地图demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E6EEF7C81DF94E1C0036A673 = {
 			isa = PBXGroup;
 			children = (
 				E6EEF7D31DF94E1D0036A673 /* 高德地图demo */,
 				E6EEF7D21DF94E1D0036A673 /* Products */,
+				C10A1911A2ACB74FBD169AD2 /* Pods */,
+				195526913462E39F094AB914 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6EEF7E81DF94E1D0036A673 /* Build configuration list for PBXNativeTarget "高德地图demo" */;
 			buildPhases = (
+				DD95C543B77FD543BE4778B2 /* [CP] Check Pods Manifest.lock */,
 				E6EEF7CD1DF94E1C0036A673 /* Sources */,
 				E6EEF7CE1DF94E1C0036A673 /* Frameworks */,
 				E6EEF7CF1DF94E1C0036A673 /* Resources */,
+				680B76FF899537F070C654C8 /* [CP] Embed Pods Frameworks */,
+				7F403C917DE3281DA000FB11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +137,7 @@
 				TargetAttributes = {
 					E6EEF7D01DF94E1C0036A673 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LQHT8X75PQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		680B76FF899537F070C654C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高德地图demo/Pods-高德地图demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F403C917DE3281DA000FB11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-高德地图demo/Pods-高德地图demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD95C543B77FD543BE4778B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6EEF7CD1DF94E1C0036A673 /* Sources */ = {
@@ -268,22 +344,28 @@
 		};
 		E6EEF7E91DF94E1D0036A673 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D2F735CEE6FF143B8DC8422 /* Pods-高德地图demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LQHT8X75PQ;
 				INFOPLIST_FILE = "高德地图demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rainbowbus.liyz.----demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyizhe.amapdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		E6EEF7EA1DF94E1D0036A673 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212F795C1A2956752443FAB8 /* Pods-高德地图demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LQHT8X75PQ;
 				INFOPLIST_FILE = "高德地图demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rainbowbus.liyz.----demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liyizhe.amapdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -307,6 +389,7 @@
 				E6EEF7EA1DF94E1D0036A673 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
