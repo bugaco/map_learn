@@ -28,6 +28,24 @@
     _mapView.mapType = MAMapTypeStandardNight;
     [self.view addSubview:_mapView];
     
+    /*
+        地图logo控件
+     */
+    _mapView.logoCenter = CGPointMake(CGRectGetWidth(self.view.bounds) / 2, CGRectGetHeight(self.view.bounds) / 2);
+    
+    /*
+        指南针控件
+     */
+    _mapView.showsCompass = YES;
+    _mapView.compassOrigin = CGPointMake(100, 200);
+    
+    /*
+        比例尺控件
+     */
+    _mapView.showsScale = YES;
+    _mapView.scaleOrigin = CGPointMake(30, 50);
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
